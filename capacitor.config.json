@@ -10,9 +10,5 @@
     }
   },
   "cordova": {},
-  "linuxAndroidStudioPath": "/home/hanz/Apps/android-studio/bin/studio.sh",
-  "server": {
-    "url": "http://192.168.43.118:8100",
-    "cleartext": true
-  }
+  "linuxAndroidStudioPath": "/home/hanz/Apps/android-studio/bin/studio.sh"
 }

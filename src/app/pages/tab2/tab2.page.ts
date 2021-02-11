@@ -2,26 +2,31 @@ import { Component } from '@angular/core';
 import { NFC, Ndef } from '@ionic-native/nfc/ngx';
 import { ToastController } from '@ionic/angular';
 
+
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-tab2',
+  templateUrl: './tab2.page.html',
+  styleUrls: ['./tab2.page.scss'],
   providers: [NFC, Ndef]
 })
-export class HomePage {
+export class Tab2Page {
+
   nfc_id: string;
+  techTypes: string;
 
   constructor(
     private nfc: NFC,
     private ndef: Ndef,
     private toastCtrl: ToastController
-  ) {}
+  ) { }
 
   ionViewWillEnter() {
     this.check();
-    setInterval(() => {
-      this.check()
-    }, 2000)
+  }
+
+  ionViewDidEnter() {
+    this.check();
+
   }
 
   check() {
@@ -35,7 +40,7 @@ export class HomePage {
         }
 
         const id = this.nfc.bytesToHexString(tag.id)
-        this.presentToastWithOptions(id);
+        
         this.nfcID(id);
         
       },
@@ -47,10 +52,10 @@ export class HomePage {
     this.nfc_id = await id;
     return this.nfc_id;
   }
-
+  
   async presentToastWithOptions(params) {
     const toast = await this.toastCtrl.create({
-      header: 'Reading Success',
+      header: 'Reading NFC haha',
       message: params,
       position: 'top',
       duration: 3000,
@@ -73,4 +78,5 @@ export class HomePage {
     });
     toast.present();
   }
+
 }
