@@ -6,11 +6,25 @@
 
 <ion-content [fullscreen]="true">
   <div class="container">
-    <h1>Reading NFC</h1>
-    <ion-card class="ion-no-margin">
-      <ion-card-header>
-        <ion-card-title>Card ID : {{ nfc_id }}</ion-card-title>
-      </ion-card-header>
-    </ion-card>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button size="large" expand="block" (click)="cekNFC()">Cek NFC</ion-button>
+      </ion-col>
+      <ion-col size="12">
+        <ion-button size="large" expand="block" (click)="settingNFCPage()">Setting NFC</ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button size="large" expand="block" (click)="readerPage()">Reader</ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button size="large" expand="block" (click)="writePage()">Write</ion-button>
+      </ion-col>
+      <ion-col size="12">
+        <ion-button size="large" expand="block" (click)="ndefListenerPage()">Ndef Listener & Record</ion-button>
+      </ion-col>
+      <ion-col size="12">
+        <ion-button size="large" expand="block" (click)="tagTechnology()">Tag Technology</ion-button>
+      </ion-col>
+    </ion-row>
   </div>
 </ion-content>

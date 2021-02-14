@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { Tab3PageRoutingModule } from './tab3-routing.module';
+import { ReaderNfcPageRoutingModule } from './reader-nfc-routing.module';
 
-import { Tab3Page } from './tab3.page';
+import { ReaderNfcPage } from './reader-nfc.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    Tab3PageRoutingModule
+    ReaderNfcPageRoutingModule
   ],
-  declarations: [Tab3Page]
+  declarations: [ReaderNfcPage]
 })
-export class Tab3PageModule {}
+export class ReaderNfcPageModule {}
